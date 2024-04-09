@@ -13,6 +13,8 @@ module Ovh
 
   class InvalidCredential < StandardError; end
 
+  class InvalidConfiguration < StandardError; end
+
   class InvalidResponse < StandardError; end
 
   class InvalidRegion < StandardError; end
