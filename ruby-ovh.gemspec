@@ -1,14 +1,9 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib')
-$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
-
-require 'ruby-ovh'
-
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'ruby-ovh'
-  s.version     = Ovh.gem_version.to_s
+  s.version     = File.read(File.expand_path('./OVH_VERSION', __dir__)).strip
   s.summary     = 'Client REST for OVH API'
   s.description = ''
 
