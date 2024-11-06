@@ -2,6 +2,10 @@
 
 source 'https://rubygems.org'
 
-ruby '>= 2.7'
+ruby '>= 3.1'
 
-gem 'faraday', '~> 2.9'
+gem 'faraday', '~> 2.12'
+
+group :development do
+  gem 'rubocop'
+end

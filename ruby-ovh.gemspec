@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.summary     = 'Client REST for OVH API'
   s.description = ''
 
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = '>= 3.1'
+  s.required_rubygems_version = ">= 1.8.11"
 
-  s.license = 'MIT'
+  s.license = 'GPL-3.0-only'
 
   s.author   = 'Maxime Désécot'
   s.email    = 'maxime.desecot@gmail.com'
@@ -18,5 +19,6 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n")
   s.require_path = %w[lib]
 
-  s.add_dependency('faraday', ['2.9.0'])
+  s.add_dependency('faraday', ['>= 2.12'])
+  s.metadata['rubygems_mfa_required'] = 'true'
 end

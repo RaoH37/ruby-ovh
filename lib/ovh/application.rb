@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require 'faraday'
+require 'json'
+require 'openssl'
+
 module Ovh
   class Application
     def initialize
@@ -8,8 +12,8 @@ module Ovh
       @time_delta = 0
     end
 
-    def configuration(&block)
-      @configuration ||= Configuration.new(&block)
+    def configuration(&)
+      @configuration ||= Configuration.new(&)
     end
 
     def get(path, need_auth: true, headers: {})
@@ -64,8 +68,17 @@ module Ovh
     private
 
     def compute_signature(method, url, body, ts)
-      concat = [configuration.application_secret, configuration.consumer_key, method.to_s.upcase, url, body, ts].join('+')
+      concat = [
+        configuration.application_secret,
+        configuration.consumer_key,
+        method.to_s.upcase,
+        url,
+        body,
+        ts
+      ].join('+')
+
       hex = @sha1.hexdigest(concat)
+
       "$1$#{hex}"
     end
 
