@@ -43,9 +43,31 @@ client = Ovh::Application.new do |config|
   config.consumer_key = 'xxxxxxxxxxxxxxx'
 end
 ````
-or
+or you can also initialize your connection from a configuration file :
 ```ruby
 client = Ovh::Application.new do |config|
   config.load_from_path('./config.json')
 end
+````
+
+### Usage
+
+In reference to online documentation
+
+https://eu.api.ovh.com/
+
+ruby-ovh is used as follows:
+
+```ruby
+# For call using http GET method
+client.get("/ws/call/path/")
+
+# For call using http POST method
+client.post("/ws/call/path/", data: {})
+
+# For call using http PUT method
+client.put("/ws/call/path/", data: {})
+
+# For call using http DELETE method
+client.delete("/ws/call/path/")
 ````

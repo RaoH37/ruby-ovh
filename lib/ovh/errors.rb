@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 module Ovh
-  class HTTPError < StandardError; end
-
   class APIError < StandardError; end
 
   class InvalidHTTPMethod < StandardError; end
@@ -14,12 +12,6 @@ module Ovh
   class InvalidCredential < StandardError; end
 
   class InvalidConfiguration < StandardError; end
-
-  class InvalidResponse < StandardError; end
-
-  class InvalidRegion < StandardError; end
-
-  class ReadOnlyError < StandardError; end
 
   class ResourceNotFoundError < StandardError; end
 
