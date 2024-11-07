@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = ''
 
   s.required_ruby_version = '>= 3.1'
-  s.required_rubygems_version = ">= 1.8.11"
+  s.required_rubygems_version = '>= 1.8.11'
 
   s.license = 'GPL-3.0-only'
 

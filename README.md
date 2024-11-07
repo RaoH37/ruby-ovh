@@ -8,7 +8,7 @@ Author: Maxime Désécot <maxime.desecot@gmail.com>
 
 OS: Linux distribution LTS
 
-Language: Ruby2.7+
+Language: Ruby3.1+
 
 ```
 $ apt install ruby
@@ -28,7 +28,7 @@ Language: Ruby2.7+
 ```
 $ apt install ruby
 $ gem install bundler
-$ gem install ruby-ovh-1.0.0.gem
+$ gem install ruby-ovh-0.3.0.gem
 ```
 
 ## Examples of uses:
