@@ -23,7 +23,7 @@ $ gem build ruby-ovh.gemspec
 
 OS: Linux distribution LTS
 
-Language: Ruby2.7+
+Language: Ruby3.1+
 
 ```
 $ apt install ruby

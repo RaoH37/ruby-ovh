@@ -91,6 +91,8 @@ module Ovh
     end
 
     def do_request(method, url, body: nil, params: nil, headers: {})
+      Ovh.logger.debug "method=#{method} url=#{url} body=#{body} params=#{params} headers=#{headers}"
+
       conn = Faraday.new(
         url:,
         headers:,
