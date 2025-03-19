@@ -28,7 +28,7 @@ Language: Ruby3.1+
 ```
 $ apt install ruby
 $ gem install bundler
-$ gem install ruby-ovh-0.3.0.gem
+$ gem install ovh-rest-client-0.3.0.gem
 ```
 
 ## Examples of uses:
